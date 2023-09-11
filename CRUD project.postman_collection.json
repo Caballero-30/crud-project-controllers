@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "a38aa2fe-7117-4778-8c6c-bc1d838a9ac5",
+		"name": "CRUD project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26061965"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/employee",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"names\": \"John\",\r\n    \"surname\": \"Doe\",\r\n    \"birthDate\": \"1988-07-12\",\r\n    \"address\": \"Somewhere\",\r\n    \"telf\": \"+345984321\",\r\n    \"emailAddress\": \"john.doe@outlook.com\",\r\n    \"position\": \"Chief\",\r\n    \"hireDate\": \"2034-09-21\",\r\n    \"salary\": 1500,\r\n    \"department\": {\r\n        \"id\": \"41f651f7-dc75-4101-9a26-afca51ff324f\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/employee",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/employee/9602a8a2-3e5f-4a46-be5d-2cbdd044061f",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"employee",
+								"9602a8a2-3e5f-4a46-be5d-2cbdd044061f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/department",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Second department\",\r\n    \"description\": \"The is the second department\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/department",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"department"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"The second department\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/department/e8b7ed76-635c-4315-bb93-22e711908dd3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"department",
+								"e8b7ed76-635c-4315-bb93-22e711908dd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/department/defc0175-08a8-4dd7-9a53-278289a11732",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"department",
+								"defc0175-08a8-4dd7-9a53-278289a11732"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
